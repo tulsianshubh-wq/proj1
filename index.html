@@ -13,27 +13,25 @@
       background-size: cover;
     }
 
-    /* Dark overlay for readability */
+    /* Gradient overlay for brightness fade */
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.75);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.8));
       z-index: -1;
     }
 
     header {
-      background: #1a1a1a;
-      color: #d4af37; /* elegant gold accent */
-      padding: 25px;
-      font-size: 2.5em;
+      padding: 60px 20px 20px;
+      font-size: 3em;
       letter-spacing: 2px;
       text-align: center;
-      font-weight: 600;
+      font-weight: 700;
+      color: #fff; /* white text on background */
       text-transform: uppercase;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
 
     .container {
@@ -44,11 +42,23 @@
       width: 90%;
     }
 
+    /* About Us floats directly on background */
+    .about-box {
+      width: 85%;
+      margin: 20px auto;
+      padding: 30px;
+      text-align: center;
+      color: #fff; /* white text */
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* Solid dark boxes for form + contact */
     .box {
-      background: #222; /* solid dark box */
+      background: #222;
       color: #f5f5f5;
-      width: 40%;
-      margin: 20px;
+      width: 85%;
+      margin: 20px auto;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -62,7 +72,7 @@
     }
 
     .box h2 {
-      color: #d4af37; /* gold headings */
+      color: #d4af37; /* elegant gold headings */
       margin-bottom: 15px;
       font-weight: 600;
     }
@@ -79,7 +89,7 @@
 
     button {
       padding: 12px;
-      background-color: #d4af37; /* gold button */
+      background-color: #d4af37;
       color: #111;
       border: none;
       border-radius: 5px;
@@ -89,12 +99,12 @@
     }
 
     button:hover {
-      background-color: #b7950b; /* deeper gold on hover */
+      background-color: #b7950b;
       color: #fff;
     }
 
     footer {
-      background: #1a1a1a;
+      background: #111;
       color: #aaa;
       padding: 15px;
       text-align: center;
@@ -110,14 +120,14 @@
     Savarna by Shubh Corporation
   </header>
 
+  <div class="about-box">
+    <h2>About Us</h2>
+    <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
+    <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
+  </div>
+
   <div class="container">
     <div class="box">
-      <h2>About Us</h2>
-      <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
-      <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
-    </div>
-
-    <div class="box" style="width: 85%;">
       <h2>Retailer Order Form</h2>
       <form action="https://formspree.io/f/mwlkkpvw" method="POST">
         <input type="text" name="Retailer Name" placeholder="Your Name" required>
@@ -129,7 +139,7 @@
       </form>
     </div>
 
-    <div class="box" style="width: 85%;">
+    <div class="box">
       <h2>Contact Details</h2>
       <p><strong>Rohit Tulsain</strong></p>
       <p>📞 8980419401 | 9336101896</p>
