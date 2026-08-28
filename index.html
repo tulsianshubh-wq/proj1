@@ -7,111 +7,132 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    /* Background image */
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
       background: url('sapic.jpeg') no-repeat center center fixed;
       background-size: cover;
-      z-index: -2; /* stays behind everything */
     }
 
-    /* Overlay for smooth transparency */
+    /* Overlay for smooth readability */
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.4); /* adjust transparency here */
+      background: rgba(255,255,255,0.7); /* light overlay */
       z-index: -1;
     }
 
     header {
+      background: #2c3e50;
+      color: white;
       padding: 20px;
-      font-size: 2em;
+      font-size: 2.5em;
       letter-spacing: 2px;
+      text-align: center;
+      font-weight: 600;
     }
 
-    section {
-      margin: 20px auto;
-      padding: 20px;
-      width: 80%;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 40px auto;
+      width: 90%;
+    }
+
+    .box {
+      background: white;
+      color: #2c3e50;
+      width: 40%;
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    .box h2 {
+      color: #e74c3c;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      align-items: center;
     }
 
     input, textarea {
-      margin: 10px;
-      padding: 10px;
-      width: 60%;
-      border: none;
+      margin: 10px 0;
+      padding: 12px;
+      border: 1px solid #ccc;
       border-radius: 5px;
+      font-family: inherit;
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #ff6f61;
+      padding: 12px;
+      background-color: #e74c3c;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #c0392b;
     }
 
     footer {
-      padding: 10px;
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
       font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <div class="background"></div>
   <div class="overlay"></div>
 
   <header>
     Savarna by Shubh Corporation
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
-    <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
-  </section>
+  <div class="container">
+    <div class="box">
+      <h2>About Us</h2>
+      <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
+      <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
+    </div>
 
-  <section>
-    <h2>Contact Details</h2>
-    <p><strong>Rohit Tulsain</strong></p>
-    <p>📞 8980419401 | 9336101896</p>
-    <p>📧 rtc2006@rediffmail.com</p>
-    <p>🏢 Block A, Shop No. 15, Third Floor, Sumel Business Park-1,<br>
-    Behind New Cloth Market, Ahmedabad-380002</p>
-  </section>
+    
+    <div class="box" style="width: 85%;">
+      <h2>Distributor Order Form</h2>
+      <form action="https://formspree.io/f/mwlkkpvw" method="POST">
+        <input type="text" name="Retailer Name" placeholder="Your Name" required>
+        <input type="text" name="Item Number" placeholder="Item Number (e.g., SPR-56)" required>
+        <input type="number" name="Quantity" placeholder="Quantity" required>
+        <input type="text" name="Expected Price" placeholder="Expected Price" required>
+        <textarea name="Additional Notes" placeholder="Additional details or requests"></textarea>
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
+  </div>
 
-  <section>
-    <h2>Retailer Order Form</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="Retailer Name" placeholder="Your Name" required>
-      <input type="text" name="Item Number" placeholder="Item Number (e.g., SPR-56)" required>
-      <input type="number" name="Quantity" placeholder="Quantity" required>
-      <input type="text" name="Expected Price" placeholder="Expected Price" required>
-      <textarea name="Additional Notes" placeholder="Additional details or requests"></textarea>
-      <button type="submit">Submit Order</button>
-    </form>
-  </section>
+
+  <div class="box">
+      <h2>Contact Details</h2>
+      <p><strong>Rohit Tulsain</strong></p>
+      <p>📞 8980419401 | 9336101896</p>
+      <p>📧 rtc2006@rediffmail.com</p>
+      <p>🏢 Block A, Shop No. 15, Third Floor, Sumel Business Park-1,<br>
+      Behind New Cloth Market, Ahmedabad-380002</p>
+    </div>
 
   <footer>
     © 2026 Savarna by Shubh Corporation | Crafted with ❤️ in Ahmedabad
