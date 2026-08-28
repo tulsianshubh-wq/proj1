@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Savarna by Shubh Corporation</title>
+  <style>
+    /* Moving gradient background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #fad0c4, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #b03060;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #b03060;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #902050;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Savarna Order Form</h1>
+    <form action="https://formspree.io/f/mwlkkpvw" method="POST">
+      <label for="item">Item Number</label>
+      <input type="text" id="item" name="item" placeholder="e.g. SPR-56" required>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+
+      <label for="price">Expected Price (₹)</label>
+      <input type="text" id="price" name="price" placeholder="Enter expected price" required>
+
+      <label for="retailer">Retailer Name</label>
+      <input type="text" id="retailer" name="retailer" placeholder="Your name/company" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</body>
+</html>
 
