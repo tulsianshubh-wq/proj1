@@ -28,13 +28,23 @@
 
     header {
       padding: 60px 20px 20px;
-      font-size: 3em;
-      letter-spacing: 2px;
       text-align: center;
-      font-weight: 700;
+    }
+
+    .main-title {
+      font-size: 3.5em;
+      font-family: 'Cinzel Decorative', serif;
       color: #1a2a6c; /* elegant navy blue */
       text-transform: uppercase;
-      font-family: 'Cinzel Decorative', serif; /* stylish font */
+      margin: 0;
+    }
+
+    .sub-title {
+      font-size: 1.2em;
+      font-family: 'Poppins', sans-serif;
+      color: #444; /* subtle grey tagline */
+      margin-top: 10px;
+      letter-spacing: 2px;
     }
 
     .container {
@@ -45,15 +55,28 @@
       width: 90%;
     }
 
-    /* About Us floats directly on background */
+    /* About Us box with solid background */
     .about-box {
-      width: 85%;
-      margin: 20px auto;
+      background: #222;
+      color: #f5f5f5;
+      width: 40%;
+      margin: 20px;
       padding: 30px;
-      text-align: center;
-      color: #fff; /* white text */
-      font-size: 1.2em;
-      line-height: 1.6;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.8);
+    }
+
+    .about-box h2 {
+      color: #d4af37; /* gold heading */
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
     /* Solid dark boxes for form + contact */
@@ -120,16 +143,17 @@
   <div class="overlay"></div>
 
   <header>
-    Savarna by Shubh Corporation
+    <h1 class="main-title">Savarna</h1>
+    <p class="sub-title">by Shubh Corporation</p>
   </header>
 
-  <div class="about-box">
-    <h2>About Us</h2>
-    <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
-    <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
-  </div>
-
   <div class="container">
+    <div class="about-box">
+      <h2>About Us</h2>
+      <p><strong>LOOKS Creation</strong> | <strong>Savarna</strong> | <strong>R.S. Enterprises</strong></p>
+      <p>We specialize in designer unstitched salwar suits crafted with elegance and precision. Our creations blend tradition with modern aesthetics, offering premium quality fabrics and designs.</p>
+    </div>
+
     <div class="box">
       <h2>Retailer Order Form</h2>
       <form action="https://formspree.io/f/mwlkkpvw" method="POST">
